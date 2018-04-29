@@ -8,6 +8,7 @@
 <!-- autor: Marcin Lis                http://marcinlis.com  -->
 <script type="text/javascript">
 <!-- Ukrycie przed przegl±darkami nieobs³uguj±cymi JavaScriptu
+// moduify the function so it also displays an ocurrance index
 function przetwarzaj (f)
 {
   var tekst = f.okno_tekstowe.value;
@@ -16,15 +17,19 @@ function przetwarzaj (f)
   var indeks = 0;
   var indeks_wystapienia = 0;
   var liczba_wystapien = 0;
+  var tekst_wystapien = "";
 
   while (indeks_wystapienia != -1){
     indeks_wystapienia = tekst.indexOf (ciag, indeks);
     if (indeks_wystapienia != -1){
       indeks = indeks_wystapienia + 1;
       liczba_wystapien++;
+	  if (tekst_wystapien != "") tekst_wystapien += ", ";
+	  tekst_wystapien += indeks_wystapienia + 1;
     }
   }
   f.ile.value = liczba_wystapien;
+  f.gdzie.value = tekst_wystapien;
 }
 // Koniec kodu JavaScript -->
 </script>
@@ -62,8 +67,8 @@ function przetwarzaj (f)
   <td ALIGN = "right">
     <h2>
     Podany ci±g znaków wyst±pi³ w tek¶cie:<br>
-    <input type = "text" name = "ile"><br>
-    razy.
+    <input type = "text" name = "ile">razy,<br>
+	na pozycjach: <input type = "text" name = "gdzie">.<br>
     </h2>
  </td>
 </tr>
