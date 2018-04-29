@@ -1,7 +1,17 @@
 // navbar.js
 
+//modify the script so it changes the element order depending on time
+
 var navURLs  = new Array('astronomy.html', 'science.html', 'sports.html', 'music.htm', 'people.htm');
 var linkText = new Array('Astronomy', 'Other Sciences', 'Sports', 'Musicians\' Corner', 'Cool People');
+
+var today = new Date();
+var curHr = today.getHours();
+
+if (curHr < 12) {
+  navURLs = navURLs.reverse();
+  linkText = linkText.reverse();
+}
 
 function navbar() {
 	var navStr= '';
@@ -13,3 +23,4 @@ function navbar() {
 		}
 	document.writeln('<BR><BR>' + navStr);
 	}
+	

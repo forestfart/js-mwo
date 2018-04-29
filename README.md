@@ -1,1 +1,2 @@
-## Java Script excercises - Metody Wytwarzania Oprogramowania
+## Java Script excercises
+Metody Wytwarzania Oprogramowania
