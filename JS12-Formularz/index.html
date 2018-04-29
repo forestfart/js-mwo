@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<title>Formularz</title>
+<!-- Skrypt pochodzi z książki "101 praktycznych skryptów"  -->
+<!-- autor: Marcin Lis                http://marcinlis.com  -->
+<script type="text/javascript">
+<!-- Ukrycie przed przeglądarkami nieobsługującymi JavaScriptu
+function przetwarzaj_dane (){
+  var brakuje_danych = false;
+  var formularz = document.forms[0];
+  var napis = "";
+  if(formularz.imie.value == ""){
+    napis += "imie\n"
+    brakuje_danych = true;
+  }
+  if(formularz.nazwisko.value == ""){
+    napis += "nazwisko\n"
+    brakuje_danych = true;
+  }
+  if(formularz.kraj.value == ""){
+    napis += "kraj\n"
+    brakuje_danych = true;
+  }
+  if(formularz.tel.value == ""){
+    napis += "telefon\n"
+    brakuje_danych = true;
+  }
+  if(!brakuje_danych)
+    formularz.submit();
+  else
+    alert ("Nie wypełniłeś następujących pól:\n" + napis);
+}
+// Koniec kodu JavaScript -->
+</script>
+</head>
+<body>
+
+<form name = "formularz1" action="" method="GET">
+<h2>Proszę podać swoje dane:
+<font size="-1"><i><br>
+(Pola oznaczone * muszą zostać wypełnione)
+</i></font></h2>
+<br><br>
+<table>
+<tr>
+  <td><b>Dane personalne:</b>
+  </td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>imię:
+  </td>
+  <td><input type="text" name="imie">*
+  </td>
+</tr>
+<tr>
+  <td>nazwisko:
+  </td>
+  <td><input type="text" name="nazwisko">*
+  </td>
+</tr>
+<tr>
+  <td><b>Adres:</b>
+  </td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td>ulica:
+  </td>
+  <td><input type="text" name="ulica">
+  </td>
+</tr>
+<tr>
+  <td>nr domu:
+  </td>
+  <td><input type="text" name="nrdomu">
+  </td>
+</tr>
+<tr>
+  <td>kod:
+  </td>
+  <td><input type="text" name="kod">
+  </td>
+</tr>
+<tr>
+  <td>miasto:
+  </td>
+  <td><input type="text" name="miasto">
+  </td>
+</tr>
+<tr>
+  <td>kraj:
+  </td>
+  <td><input type="text" name="kraj">*
+  </td>
+</tr>
+<tr>
+  <td>tel.:
+  </td>
+  <td><input type="text" name="tel">*
+  </td>
+</tr>
+<tr>
+  <td>
+  </td>
+  <td align="center">
+    <input type    = "button"
+           name    = "wyslij" 
+           VALUE   = "   Wyślij!   "
+           onClick = "przetwarzaj_dane()"
+    >
+  </td>
+</tr>
+</table>
+</form>
+</body>
+</html>

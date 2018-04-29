@@ -1,0 +1,145 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2" />
+<title>Moja strona WWW</title>
+<!-- Skrypt pochodzi z książki "101 praktycznych skryptów"  -->
+<!-- autor: Marcin Lis                http://marcinlis.com  -->
+<script type="text/javascript">
+<!-- Ukrycie przed przeglądarkami nieobsługującymi JavaScriptu
+var speedTable = new Array();
+var speed = 50;
+var speedLevels = 5;
+var lWidth = 50;
+var lHeight = 50;
+function ustaw()
+{
+  for (i = 0; i < 10; i++){
+    var posX = Math.ceil(Math.random() * 
+      (document.body.clientWidth - lWidth));
+    document.getElementById("el" + i).style.left = posX + "px";
+    speedTable[i] = Math.ceil(Math.random() * speedLevels);
+  }
+}
+function start()
+{
+  for (i = 0; i < 10; i++){
+    x = parseInt(document.getElementById("el" + i).style.top);
+    x += speedTable[i];
+    if (x >= document.body.clientHeight - lHeight){
+      x = 1;
+      var posX = Math.ceil(Math.random() * 
+        (document.body.clientWidth - lWidth));
+      document.getElementById("el" + i).style.left = posX;
+      speedTable[i] = Math.ceil(Math.random() * speedLevels);
+    }
+    document.getElementById("el" + i).style.top = x + "px";
+ }
+ setTimeout("start()", speed);
+}
+// Koniec kodu JavaScript -->
+</script>
+</head>
+<body onLoad="ustaw();start();">
+<div
+ id="el0"
+ style = "visibility: visible;
+ width=50px;
+ heigth=50px;
+ position: absolute;
+ top: 1px;
+ left: 1px;">
+<img src='snow2.gif' alt="płatek">
+</div>
+<div
+ id="el1"
+ style = "visibility: visible;
+ width=50px;
+ heigth=50px;
+ position: absolute;
+ top: 1px;
+ left: 1px;">
+<img src='snow2.gif' alt="płatek">
+</div>
+<div
+ id="el2"
+ style = "visibility: visible;
+ width=50px;
+ heigth=50px;
+ position: absolute;
+ top: 1px;
+ left: 1px;">
+<img src='snow2.gif' alt="płatek">
+</div>
+<div
+ id="el3"
+ style = "visibility: visible;
+ width=50px;
+ heigth=50px;
+ position: absolute;
+ top: 1px;
+ left: 1px;">
+<img src='snow2.gif' alt="płatek">
+</div>
+<div
+ id="el4"
+ style = "visibility: visible;
+ width=50px;
+ heigth=50px;
+ position: absolute;
+ top: 1px;
+ left: 1px;">
+<img src='snow2.gif' alt="płatek">
+</div>
+<div
+ id="el5"
+ style = "visibility: visible;
+ width=50px;
+ heigth=50px;
+ position: absolute;
+ top: 1px;
+ left: 1px;">
+<img src='snow2.gif' alt="płatek">
+</div>
+<div
+ id="el6"
+ style = "visibility: visible;
+ width=50px;
+ heigth=50px;
+ position: absolute;
+ top: 1px;
+ left: 1px;">
+<img src='snow2.gif' alt="płatek">
+</div>
+<div
+ id="el7"
+ style = "visibility: visible;
+ width=50px;
+ heigth=50px;
+ position: absolute;
+ top: 1px;
+ left: 1px;">
+<img src='snow2.gif' alt="płatek">
+</div>
+<div
+ id="el8"
+ style = "visibility: visible;
+ width=50px;
+ heigth=50px;
+ position: absolute;
+ top: 1px;
+ left: 1px;">
+<img src='snow2.gif' alt="płatek">
+</div>
+<div
+ id="el9"
+ style = "visibility: visible;
+ width=50px;
+ heigth=50px;
+ position: absolute;
+ top: 1px;
+ left: 1px;">
+<img src='snow2.gif' alt="płatek">
+</div>
+<h1 align="center">Treść strony</h1>
+</body>
+</html>

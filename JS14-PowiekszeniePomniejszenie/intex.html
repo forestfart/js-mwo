@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+   <head>
+      <title>Czytaj TO</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <script type="text/javascript">
+         //<![CDATA[
+
+         function makeMore() {
+            var div = document.getElementById("div1");
+            div.style.fontSize="larger";
+            div.style.letterSpacing="10px";
+            div.style.textAlign="justify";
+            div.style.textTransform="uppercase";
+            div.style.fontSize="xx-large";
+            div.style.fontWeight="900";
+            div.style.lineHeight="40px";
+         }
+
+         function makeLess() {
+            var div = document.getElementById("div1");
+            div.style.fontSize="smaller";
+            div.style.letterSpacing="normal";
+            div.style.textAlign="left";
+            div.style.textTransform="none";
+            div.style.fontSize="medium";
+            div.style.fontWeight="normal";
+            div.style.lineHeight="normal";
+         }
+         //]]>
+      </script>
+
+   </head>
+   <body>
+      <p>
+         <a href="" onclick="makeMore(); return false;">Powiększ wszystko</a> <a href="" onclick="makeLess(); return false;">Pomniejsz wszystko</a>
+      </p>
+      <div id="div1">
+         <p>Jednym z pierwszych elementów HTML charakterystycznych dla prezentacji był element font. Jest on również jednym ze starszych elementów HTML, które nadal zbyt często można odnaleźć na stronach internetowych. Nie powinno być zaskoczeniem, że właśnie właściwości font oraz text były tak interesujące dla budowania stron internetowych. Niewiele zmian, które można uczynić w atrybutach style elementu, może mieć taki efekt, jak zmiany text bądź font.</p>
+         <p>Warto zauważyć, że mowa jest o właściwościach font oraz text. Właściwość font wiąże się z samymi znakami: ich rodziną, rozmiarem, typem i innymi cechami ich wyglądu. Atrybuty text mają więcej wspólnego z dekoracją dołączoną do tekstu, jego położeniem i tak dalej.</p>
+      </div>
+   </body>
+</html>

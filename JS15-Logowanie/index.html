@@ -1,0 +1,53 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<title>Moja strona WWW</title>
+<!-- Skrypt pochodzi z książki "101 praktycznych skryptów"  -->
+<!-- autor: Marcin Lis                http://marcinlis.com  -->
+<script type="text/javascript">
+<!-- Ukrycie przed przeglądarkami nieobsługującymi JavaScriptu
+var users = new Array("user1", "user2", "user3");
+var passwords = new Array("kod1", "kod2", "kod3");
+function sprawdz_haslo(user, pass)
+{  
+  for(var i = 0; i < users.length; i++){
+    if((user == users[i]) && (pass == passwords[i]))
+      return true;
+  }
+  return false;
+}
+function check()
+{
+  var user = document.getElementById("user").value;
+  var pass = document.getElementById("pass").value;
+  if(!sprawdz_haslo(user, pass)){
+      alert('Niepoprawne hasło!');
+  }
+  else{
+    document.location.href = "wejdz.html"; 
+  }
+}
+// Koniec kodu JavaScript -->
+</script>
+</head>
+<body>
+<h2 align="center">Wprowadź nazwę użytkownika i hasło:</h2>
+<table border="1" align="center">
+<tr>
+<td bordercolor="#FFFFFF">Użytkownik:</td>
+<td bordercolor="#FFFFFF">
+  <input type="text" id="user">
+</td>
+</tr><tr>
+<td bordercolor="#FFFFFF">Hasło:</td>
+<td bordercolor="#FFFFFF">
+  <input type="password" id="pass">
+</td>
+</tr><tr>
+<td colspan="2" align="center" bordercolor="#FFFFFF">
+  <input type="button" value="Wejdź" onClick="check();">
+</td>
+</tr>
+</table>
+</body>
+</html>

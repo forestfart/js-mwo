@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+   <head>
+      <title>Witaj, świecie Ajax</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+      <style type="text/css">
+         div.elem {
+            margin: 20px;
+         }
+      </style>
+
+      <script type="text/javascript">
+         //<![CDATA[
+
+         var xmlhttp = false;
+         if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+            xmlhttp.overrideMimeType('text/xml');
+         } else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+         }
+
+         function populateList() {
+            var state = document.forms[0].elements[0].value;
+            var url = 'ajax.php?state=' + state;
+            xmlhttp.open('GET', url, true);
+            xmlhttp.onreadystatechange = getCities;
+            xmlhttp.send(null);
+
+         }
+
+         function getCities() {
+            if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+               document.getElementById('cities').innerHTML = "<select>" + xmlhttp.responseText + "</select>";
+            } else {
+               document.getElementById('cities').innerHTML = 'Błąd: preSearch zakończony niepowodzeniem!';
+            }
+         }
+         //]]>
+      </script>
+
+   </head>
+   <body>
+
+      <h3>Wybierz województwo:</h3>
+      <form action="ajax.php" method="get">
+         <div class="elem">
+            <select onchange="populateList()">
+               <option value="SL">śląskie</option>
+               <option value="PM">pomorskie</option>
+               <option value="DS">dolnośląskie</option>
+               <option value="WP">wielkopolskie</option>
+            </select>
+         </div>
+         <h3>Miasta:</h3>
+         <div class="elem" id="cities">
+            <select>
+            </select>
+         </div>
+      </form>
+
+   </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>Obiekt Node</title>
+      <script type="text/javascript">
+         //<![CDATA[
+
+         // losowy generator kolorów
+         function randomColor() {
+            r=Math.floor(Math.random() * 255).toString(16);
+            g=Math.floor(Math.random() * 255).toString(16);
+            b=Math.floor(Math.random() * 255).toString(16);
+            return "#"+r+g+b;
+         }
+
+         // zwrócenie niektórych właściwości węzła
+         function outputNodeProps(nd) {
+
+            var strNode = "Typ węzła: " + nd.nodeType;
+            strNode += "\nNazwa węzła: " + nd.nodeName;
+            strNode += "\nWartość węzła: " + nd.nodeValue;
+
+            // jeśli styl jest ustawiony (właściwość Element)
+            if (nd.style) {
+               var clr = randomColor();
+               nd.style.backgroundColor=clr;
+               strNode += "\nKolor tła: " + clr;
+            }
+
+            // wyświetlenie właściwości węzła
+            alert(strNode);
+
+            // teraz przetwarzanie węzłów potomnych
+            var children = nd.childNodes;
+            for(var i=0; i < children.length; i++) {
+               outputNodeProps(children[i]);
+            }
+         }
+
+         //]]>
+      </script>
+   </head>
+   <body onload="outputNodeProps(document)">
+      <div id="div1">
+         <h1>Nagłówek</h1>
+         <!-- pierwszy akapit -->
+         <p>By lepiej zrozumieć drzewo dokumentu, warto zastanowić się nad stroną internetową zawierającą części head oraz body, tytuł strony, element DIV z umieszczonym wewnątrz niego nagłówkiem H1 oraz dwoma akapitami. Jeden z akapitów zawiera tekst napisany <i>pochyloną czcionką</i>. Drugi mieści obrazek. Całość wygląda jak nierzadko spotykana strona internetowa.</p>
+         <!-- drugi akapit -->
+         <p>Drugi akapit, po którym następuje obrazek.</p>
+         <img src="impatient.gif" alt="impatient" />
+      </div>
+   </body>
+</html>
